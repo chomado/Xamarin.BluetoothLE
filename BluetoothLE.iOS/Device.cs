@@ -116,11 +116,27 @@ namespace BluetoothLE.iOS
 		/// <value>The device's services</value>
 		public IList<IService> Services { get; set; }
 
-		#endregion
+        public Beacon Beacon
+        {
+            get
+            {
+                var beacon = new Beacon(this.scanRecord);
+                return beacon;
+            }
+        }
+        public byte[] scanRecord 
+        { 
+            get 
+            {
+                return null; //TODO:_scanRecord; 
+            } 
+        }
+        
+        #endregion
 
-		#region CBPeripheral delegate methods
+        #region CBPeripheral delegate methods
 
-		private void DiscoveredService(object sender, NSErrorEventArgs args)
+        private void DiscoveredService(object sender, NSErrorEventArgs args)
 		{
 			if (_peripheral.Services != null) 
 			{

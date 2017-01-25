@@ -60,6 +60,9 @@ namespace BluetoothLE.iOS
 		/// <value>The UUID.</value>
 		public string Uuid { get { return _nativeService.UUID.ToString(); }}
 
+        // Beaconに変換するよ！
+        public Beacon Beacon;
+
 		/// <summary>
 		/// Gets a value indicating whether this instance is primary.
 		/// </summary>

@@ -29,6 +29,7 @@ namespace BluetoothLE.Example.Pages
 		void DeviceSelected (object sender, SelectedItemChangedEventArgs e)
 		{
 			var device = e.SelectedItem as IDevice;
+
 			if (device != null) {
 				App.BluetoothAdapter.ConnectToDevice(device);
 			}
@@ -38,7 +39,7 @@ namespace BluetoothLE.Example.Pages
 
 		void DeviceDiscovered (object sender, DeviceDiscoveredEventArgs e)
 		{
-			DiscoveredDevices.Add(e.Device);
+            DiscoveredDevices.Add(e.Device);
 		}
 
 		void DeviceConnected (object sender, DeviceConnectionEventArgs e)

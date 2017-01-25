@@ -26,6 +26,8 @@ namespace BluetoothLE.Core
 		/// <value>The device name</value>
 		string Name { get; }
 
+        Beacon Beacon { get; }
+
 		/// <summary>
 		/// Gets the Received Signal Strength Indicator
 		/// </summary>

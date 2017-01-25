@@ -151,6 +151,16 @@ namespace BluetoothLE.Droid
         /// <value>The device's services</value>
         public IList<IService> Services { get; set; }
 
+        public Beacon Beacon
+        {
+            get
+            {
+                var beacon = new Beacon(this.scanRecord);
+
+                return beacon;
+            }
+        }
+
         #endregion
 
         #region GattCallback delegate methods
